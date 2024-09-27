@@ -1,7 +1,15 @@
+const { useEffect } = React;
+
 const Calculator = () => {
+	const { products } = useGlobalContext();
+
 	const handleClick = () => {
 		console.log("add");
 	};
+
+	useEffect(() => {
+		console.log(products);
+	}, [products]);
 
 	return (
 		<div>

@@ -1,13 +1,23 @@
-const { useState } = React;
+const { useState, useEffect } = React;
 
 const Field = () => {
 	const [productData, setProductData] = useState({});
+	const { products, setProducts } = useGlobalContext();
 
 	const handleProductInput = (event) => {
 		const name = event.target.name;
-		const value = event.target.value;
+		let value;
+		if (name === "productPrice") {
+			value = parseFloat(event.target.value);
+		} else {
+			value = event.target.value;
+		}
 		setProductData({ ...productData, [name]: value });
 	};
+
+	useEffect(() => {
+		setProducts(productData);
+	}, [productData]);
 
 	return (
 		<div>

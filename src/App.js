@@ -1,7 +1,17 @@
+const { useState } = React;
+
 const App = () => {
+	const [products, setProducts] = useState([]);
+
 	return (
-		<div>
-			<Calculator />
-		</div>
+		<GlobalContext.Provider
+			value={{
+				products,
+				setProducts,
+			}}>
+			<div>
+				<Calculator />
+			</div>
+		</GlobalContext.Provider>
 	);
 };
