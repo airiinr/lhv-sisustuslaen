@@ -11,7 +11,8 @@ const App = () => {
 				products,
 				setProducts,
 			}}>
-			<div>
+			<div class='container'>
+				<Banner />
 				<Calculator />
 			</div>
 		</GlobalContext.Provider>
