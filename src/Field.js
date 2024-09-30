@@ -1,6 +1,6 @@
 const { useState, useEffect } = React;
 
-const Field = () => {
+const Field = ({ product, index }) => {
 	const [productData, setProductData] = useState({});
 	const { products, setProducts } = useGlobalContext();
 
@@ -15,8 +15,16 @@ const Field = () => {
 		setProductData({ ...productData, [name]: value });
 	};
 
+	// inserts product data to component state
 	useEffect(() => {
-		setProducts(productData);
+		setProductData(product);
+	}, []);
+
+	// updates products list
+	useEffect(() => {
+		const productsCopy = [...products];
+		productsCopy[index] = productData;
+		setProducts(productsCopy);
 	}, [productData]);
 
 	return (

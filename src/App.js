@@ -1,7 +1,9 @@
 const { useState } = React;
 
 const App = () => {
-	const [products, setProducts] = useState([]);
+	const [products, setProducts] = useState([
+		{ productName: "", productPrice: 0 },
+	]);
 
 	return (
 		<GlobalContext.Provider
