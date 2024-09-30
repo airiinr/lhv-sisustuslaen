@@ -11,7 +11,7 @@ const App = () => {
 				products,
 				setProducts,
 			}}>
-			<div class='container'>
+			<div class='appContainer'>
 				<Banner />
 				<Calculator />
 			</div>
