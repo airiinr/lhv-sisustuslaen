@@ -29,22 +29,18 @@ const Field = ({ product, index }) => {
 
 	return (
 		<div>
-			<label>
-				Toode
-				<input
-					name='productName'
-					type='text'
-					onChange={handleProductInput}
-				/>
-			</label>
-			<label>
-				Hind
-				<input
-					name='productPrice'
-					type='number'
-					onChange={handleProductInput}
-				/>
-			</label>
+			<input
+				name='productName'
+				className='productName'
+				type='text'
+				onChange={handleProductInput}
+			/>
+			<input
+				name='productPrice'
+				className='productPrice'
+				type='number'
+				onChange={handleProductInput}
+			/>
 		</div>
 	);
 };

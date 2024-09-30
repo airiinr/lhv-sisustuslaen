@@ -1,0 +1,64 @@
+.bannerContainer {
+	min-width: fit-content;
+	position: relative;
+	margin-left: 81px;
+	padding: 60px 40px 60px 294px;
+	border-radius: 4px;
+	background-color: #8ecdd1;
+}
+
+.bannerImage {
+	position: absolute;
+	width: 294px;
+	height: auto;
+	left: -81px;
+	top: 57px;
+	border-radius: 4px;
+}
+
+.bannerTitle {
+	width: 527px;
+	height: 22px;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 22px;
+	color: #262633;
+}
+
+.bannerContent {
+	width: 486px;
+	height: 96px;
+	margin: 13px 0;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+	color: #262633;
+}
+
+.bannerLinkContainer {
+	width: 76px;
+	height: 24px;
+	border: 1px solid red;
+}
+
+.bannerLink {
+	width: 52px;
+	height: 21.5px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: left;
+	text-decoration: none;
+	color: #262633;
+}
+
+.rectangleIcon {
+	width: 1px;
+	height: 1.5px;
+}
+
+.arrowIcon {
+	width: 16px;
+	height: 16px;
+}

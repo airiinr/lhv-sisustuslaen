@@ -1,0 +1,10 @@
+input,
+input:focus {
+	width: 212px;
+	height: 28px;
+	margin-right: 30px;
+	border: none;
+	border-bottom: 1px solid #c6c4c7;
+	text-transform: capitalize;
+	background-color: #f1edeb;
+}

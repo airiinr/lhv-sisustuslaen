@@ -1,0 +1,14 @@
+@import url("/src/components/App/App.css");
+@import url("/src/components/Banner/Banner.css");
+@import url("/src/components/Calculator/Calculator.css");
+@import url("/src/components/Field/Field.css");
+
+body,
+p,
+h2,
+h5 {
+	margin: 0;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande",
+		sans-serif;
+}
