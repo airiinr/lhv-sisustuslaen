@@ -92,7 +92,7 @@ const Calculator = () => {
 							onClick={() => addField()}>
 							<img
 								className='circlePlusIcon'
-								src='./circlePlusIcon.png'
+								src='./img/circlePlusIcon.png'
 							/>
 							<p className='addButtonText'>
 								{calculatorContent.addProductButton}
@@ -104,7 +104,7 @@ const Calculator = () => {
 							onClick={() => removeField()}>
 							<img
 								className='trashIcon'
-								src='./trashIcon.png'
+								src='./img/trashIcon.png'
 							/>
 							<p className='removeButtonText'>
 								{calculatorContent.removeProductButton}

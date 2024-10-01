@@ -8,11 +8,9 @@
 	height: auto;
 }
 
-.desktopBanner {
-	display: none;
-}
-
 .mobileBanner {
+	width: 294px;
+	height: 294px;
 	position: relative;
 }
 
@@ -122,14 +120,6 @@
 		position: absolute;
 		left: -81px;
 		top: 57px;
-	}
-
-	.desktopBanner {
-		display: block;
-	}
-
-	.mobileBanner {
-		display: none;
 	}
 
 	.bannerTitle {

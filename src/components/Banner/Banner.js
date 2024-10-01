@@ -20,7 +20,7 @@ const BannerContentContainer = () => {
 					{bannerContent.linkTitle}
 					<img
 						className='arrowIcon'
-						src='./arrowIcon.png'
+						src='./img/arrowIcon.png'
 					/>
 				</a>
 			</p>
@@ -39,7 +39,7 @@ const DesktopBanner = () => {
 		<div className='desktopBanner'>
 			<img
 				className='bannerImage'
-				src='./bannerImage.png'
+				src='./img/bannerImage.png'
 			/>
 			<BannerTitle />
 			<BannerContentContainer />
@@ -48,25 +48,24 @@ const DesktopBanner = () => {
 };
 
 const MobileBanner = ({ isHovered }) => {
-	console.log(isHovered);
 	return (
 		<div className='mobileBanner'>
 			{!isHovered ? (
-				<div className='mobileBanner'>
+				<div>
 					<img
 						className='bannerImage'
-						src='./bannerImage.png'
+						src='./img/bannerImage.png'
 					/>
 					<div className='bannerTitleContainerMobile'>
 						<BannerTitle />
 						<img
 							className='cornerIcon'
-							src='./cornerIcon.png'
+							src='./img/cornerIcon.png'
 						/>
 					</div>
 				</div>
 			) : (
-				<div className='mobileBanner'>
+				<div>
 					<BannerContentContainer />
 				</div>
 			)}
@@ -76,13 +75,7 @@ const MobileBanner = ({ isHovered }) => {
 
 const Banner = () => {
 	const [isHovered, setIsHovered] = useState(false);
-
-	useEffect(() => {
-		console.log(isHovered);
-	}, [isHovered]);
-	useEffect(() => {
-		console.log(isHovered);
-	}, []);
+	const isMobile = useCheckMobileScreen();
 
 	return (
 		<div
@@ -93,11 +86,14 @@ const Banner = () => {
 			onMouseLeave={() => {
 				setIsHovered(false);
 			}}
-			onClick={() => {
-				setIsHovered(!isHovered);
+			onTouchStart={() => {
+				setIsHovered(true);
 			}}>
-			<DesktopBanner />
-			<MobileBanner isHovered={isHovered} />
+			{isMobile ? (
+				<MobileBanner isHovered={isHovered} />
+			) : (
+				<DesktopBanner />
+			)}
 		</div>
 	);
 };
