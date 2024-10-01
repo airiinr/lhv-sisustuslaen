@@ -1,3 +1,5 @@
+const { useState, useEffect } = React;
+
 const bannerContent = {
 	title: "Kas sinu diivan on oma aja ära elanud?",
 	content:
@@ -5,14 +7,9 @@ const bannerContent = {
 	linkTitle: "Loe lisa",
 };
 
-const Banner = () => {
+const BannerContentContainer = () => {
 	return (
-		<div className='bannerContainer'>
-			<img
-				className='bannerImage'
-				src='./bannerImage.png'
-			/>
-			<h5 className='bannerTitle'>{bannerContent.title}</h5>
+		<div className='bannerContentContainer'>
 			<p className='bannerContent'>
 				{bannerContent.content}
 			</p>
@@ -27,6 +24,80 @@ const Banner = () => {
 					/>
 				</a>
 			</p>
+		</div>
+	);
+};
+
+const BannerTitle = () => {
+	return (
+		<h5 className='bannerTitle'>{bannerContent.title}</h5>
+	);
+};
+
+const DesktopBanner = () => {
+	return (
+		<div className='desktopBanner'>
+			<img
+				className='bannerImage'
+				src='./bannerImage.png'
+			/>
+			<BannerTitle />
+			<BannerContentContainer />
+		</div>
+	);
+};
+
+const MobileBanner = ({ isHovered }) => {
+	console.log(isHovered);
+	return (
+		<div className='mobileBanner'>
+			{!isHovered ? (
+				<div className='mobileBanner'>
+					<img
+						className='bannerImage'
+						src='./bannerImage.png'
+					/>
+					<div className='bannerTitleContainerMobile'>
+						<BannerTitle />
+						<img
+							className='cornerIcon'
+							src='./cornerIcon.png'
+						/>
+					</div>
+				</div>
+			) : (
+				<div className='mobileBanner'>
+					<BannerContentContainer />
+				</div>
+			)}
+		</div>
+	);
+};
+
+const Banner = () => {
+	const [isHovered, setIsHovered] = useState(false);
+
+	useEffect(() => {
+		console.log(isHovered);
+	}, [isHovered]);
+	useEffect(() => {
+		console.log(isHovered);
+	}, []);
+
+	return (
+		<div
+			className='bannerContainer'
+			onMouseEnter={() => {
+				setIsHovered(true);
+			}}
+			onMouseLeave={() => {
+				setIsHovered(false);
+			}}
+			onClick={() => {
+				setIsHovered(!isHovered);
+			}}>
+			<DesktopBanner />
+			<MobileBanner isHovered={isHovered} />
 		</div>
 	);
 };

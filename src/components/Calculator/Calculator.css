@@ -1,35 +1,36 @@
 .calculatorContainer {
 	min-width: fit-content;
 	height: auto;
-	margin-top: 123px;
-	padding: 60px 164px;
-	border-radius: 4px;
+	padding: 40px 24px;
 	background-color: #f1edeb;
 }
 
 .calculatorTitle {
-	width: 456.3px;
-	height: 69px;
-	padding: 0 78.85px;
+	width: 327px;
+	height: 103px;
 	font-weight: 300;
 	font-size: 28px;
 	line-height: 34px;
-	letter-spacing: -0.005em;
+	letter-spacing: -0.5px;
 	text-align: center;
 }
 
+.calculatorTitle > span {
+	font-weight: 700;
+}
+
 .calculator {
-	width: 617px;
-	height: 160px;
+	width: 327px;
+	height: auto;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	flex-direction: column;
 	margin-top: 40px;
 }
 
 .calculatorLeft {
-	width: 374px;
-	height: 146px;
+	width: 327px;
+	height: auto;
 }
 
 .titleContainer {
@@ -43,22 +44,18 @@
 	color: #89868d;
 }
 
-.productNameTitle {
-	width: 212px;
-	height: 18px;
-}
-
+.productNameTitle,
 .productPriceTitle {
-	width: 132px;
+	width: 155.5px;
 	height: 18px;
 }
 
 .buttonsContainer {
-	width: 374px;
+	width: inherit;
 	height: 24px;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 16px;
+	margin-top: 8px;
 }
 
 .addButton,
@@ -110,26 +107,26 @@
 }
 
 .calculatorRight {
-	width: 163px;
+	width: 327px;
 	height: 160px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 40px;
 }
 
 .totalPrice {
-	width: 110px;
 	height: 48px;
 	margin-bottom: 24px;
 	font-weight: 200;
 	font-size: 45px;
 	line-height: 48px;
-	letter-spacing: -0.015em;
+	letter-spacing: -1.5px;
 	text-align: center;
 }
 
 .loanButton {
-	width: 163px;
+	width: inherit;
 	height: 48px;
 	padding: 0px 16px;
 	border-radius: 4px;
@@ -181,4 +178,53 @@
 
 .termsAndConditionsLink:hover::before {
 	transform: scaleX(1);
+}
+
+@media (min-width: 376px) {
+	.calculatorContainer {
+		margin-top: 123px;
+		padding: 60px 164px;
+		border-radius: 4px;
+	}
+
+	.calculatorTitle {
+		width: 456.3px;
+		height: 69px;
+		padding: 0 78.85px;
+	}
+
+	.calculator {
+		width: 617px;
+		min-height: 160px;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.calculatorLeft {
+		width: 374px;
+	}
+
+	.productNameTitle {
+		width: 212px;
+		height: 18px;
+	}
+
+	.productPriceTitle {
+		width: 132px;
+		height: 18px;
+	}
+
+	.buttonsContainer {
+		margin-top: 16px;
+	}
+
+	.calculatorRight {
+		width: 163px;
+		height: 160px;
+		margin-top: 0;
+	}
+
+	.loanButton {
+		width: 163px;
+	}
 }

@@ -63,7 +63,7 @@ const Calculator = () => {
 			id='calculator'
 			className='calculatorContainer'>
 			<h2 className='calculatorTitle'>
-				<strong>{calculatorContent.titleOne} </strong>
+				<span>{calculatorContent.titleOne} </span>
 				{calculatorContent.titleTwo}
 			</h2>
 			<div className='calculator'>

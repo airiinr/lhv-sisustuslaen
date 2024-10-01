@@ -1,7 +1,7 @@
 .inputFields {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 16px;
+	margin-top: 8px;
 }
 
 .productName,
@@ -19,15 +19,29 @@
 }
 
 .productName {
-	width: 212px;
+	width: 155px;
 	border-bottom: 1px solid #c6c4c7;
 }
 
 .productPrice {
-	width: 120px;
+	width: 142px;
 }
 
 .priceLabel {
 	border-bottom: 1px solid #c6c4c7;
 	color: #89868d;
+}
+
+@media (min-width: 376px) {
+	.inputFields {
+		margin-top: 16px;
+	}
+
+	.productName {
+		width: 212px;
+	}
+
+	.productPrice {
+		width: 120px;
+	}
 }
