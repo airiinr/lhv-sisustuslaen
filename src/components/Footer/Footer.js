@@ -8,6 +8,8 @@ const footerContent = {
 };
 
 const Footer = () => {
+	const isMobile = useCheckMobileScreen();
+
 	return (
 		<div className='footerContainer'>
 			<div className='support'>
@@ -20,9 +22,11 @@ const Footer = () => {
 						{footerContent.titleOne}
 						<span> {footerContent.titleTwo}</span>
 					</p>
-					<p className='supportTextContent'>
-						{footerContent.textContent}
-					</p>
+					{!isMobile ? (
+						<p className='supportTextContent'>
+							{footerContent.textContent}
+						</p>
+					) : null}
 				</div>
 			</div>
 			<div className='contact'>

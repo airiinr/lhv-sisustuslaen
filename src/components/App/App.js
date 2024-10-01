@@ -7,6 +7,8 @@ const App = () => {
 		{ productName: "", productPrice: 0 },
 	]);
 
+	const isMobile = useCheckMobileScreen();
+
 	return (
 		<GlobalContext.Provider
 			value={{
@@ -14,9 +16,11 @@ const App = () => {
 				setProducts,
 			}}>
 			<div className='appContainer'>
-				<h2 className='pageTitle'>
-					{appContent.pageTitle}
-				</h2>
+				{isMobile ? (
+					<h2 className='pageTitle'>
+						{appContent.pageTitle}
+					</h2>
+				) : null}
 				<Banner />
 				<Calculator />
 				<Footer />

@@ -1,4 +1,5 @@
 .appContainer {
+	width: fit-content;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -19,10 +20,6 @@
 
 @media (min-width: 376px) {
 	.appContainer {
-		margin: 214px 249px 0;
-	}
-
-	.pageTitle {
-		display: none;
+		margin: 214px auto 0;
 	}
 }
