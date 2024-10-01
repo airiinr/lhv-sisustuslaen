@@ -28,19 +28,22 @@ const Field = ({ product, index }) => {
 	}, [productData]);
 
 	return (
-		<div>
+		<div className='inputFields'>
 			<input
 				name='productName'
 				className='productName'
 				type='text'
 				onChange={handleProductInput}
 			/>
-			<input
-				name='productPrice'
-				className='productPrice'
-				type='number'
-				onChange={handleProductInput}
-			/>
+			<label className='priceLabel'>
+				<input
+					name='productPrice'
+					className='productPrice'
+					type='number'
+					onChange={handleProductInput}
+				/>
+				&euro;
+			</label>
 		</div>
 	);
 };

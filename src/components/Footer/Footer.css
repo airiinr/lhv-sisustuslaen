@@ -1,0 +1,83 @@
+.footerContainer {
+	width: fit-content;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 60px;
+	padding: 60px 0;
+}
+
+.support {
+	width: 456px;
+	height: 114px;
+	display: flex;
+	margin-right: 30px;
+}
+
+.supportIcon {
+	width: 80px;
+	height: 80px;
+	margin: 17px 24px 0 0;
+}
+
+.supportText {
+	width: 352px;
+	height: 114px;
+}
+
+.supportTitle {
+	height: 26px;
+	font-weight: 300;
+	font-size: 22px;
+	line-height: 26px;
+	text-align: left;
+}
+
+.supportTitle > span {
+	font-weight: 700;
+}
+
+.supportTextContent {
+	height: 72px;
+	margin-top: 16px;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
+}
+
+.contact {
+	width: 456px;
+	height: 27px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	align-self: center;
+	justify-content: space-between;
+}
+
+.contactPhone,
+.contactEmail {
+	width: 204px;
+	height: 27px;
+	display: flex;
+	align-items: center;
+}
+
+.contactPhone {
+	justify-content: flex-end;
+}
+
+.callIcon,
+.draftsIcon {
+	width: 24px;
+	height: 24px;
+	padding-right: 16px;
+}
+
+.contactPhoneNumber,
+.contactEmailAddress {
+	width: 98px;
+	height: 27px;
+	font-size: 22px;
+	line-height: 26.6px;
+}

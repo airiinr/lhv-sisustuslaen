@@ -14,6 +14,7 @@ const App = () => {
 			<div className='appContainer'>
 				<Banner />
 				<Calculator />
+				<Footer />
 			</div>
 		</GlobalContext.Provider>
 	);

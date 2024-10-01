@@ -1,8 +1,8 @@
 const { useEffect, useState } = React;
 
 const calculatorContent = {
-	titleBold: "Koosta soovinimekiri",
-	title: "ja vaata oma uue sisustuse kuumakset",
+	titleOne: "Koosta soovinimekiri",
+	titleTwo: "ja vaata oma uue sisustuse kuumakset",
 	productNameTitle: "Toode",
 	productPriceTitle: "Hind",
 };
@@ -55,10 +55,12 @@ const Calculator = () => {
 	}, [products]);
 
 	return (
-		<div className='calculatorContainer'>
+		<div
+			id='calculator'
+			className='calculatorContainer'>
 			<h2 className='calculatorTitle'>
-				<strong>{calculatorContent.titleBold} </strong>
-				{calculatorContent.title}
+				<strong>{calculatorContent.titleOne} </strong>
+				{calculatorContent.titleTwo}
 			</h2>
 			<div className='calculator'>
 				<div className='calculatorLeft'>

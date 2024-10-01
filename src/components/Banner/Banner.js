@@ -19,15 +19,11 @@ const Banner = () => {
 			<p className='bannerLinkContainer'>
 				<a
 					className='bannerLink'
-					href='https://google.com'>
+					href='#calculator'>
 					{bannerContent.linkTitle}
 					<img
 						className='arrowIcon'
 						src='./arrowIcon.png'
-					/>
-					<img
-						className='rectangleIcon'
-						src='./rectangleIcon.png'
 					/>
 				</a>
 			</p>

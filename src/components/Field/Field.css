@@ -1,10 +1,33 @@
-input,
-input:focus {
-	width: 212px;
+.inputFields {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.productName,
+.productPrice,
+.productName:focus,
+.productPrice:focus {
 	height: 28px;
-	margin-right: 30px;
-	border: none;
-	border-bottom: 1px solid #c6c4c7;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: left;
 	text-transform: capitalize;
+	border: none;
 	background-color: #f1edeb;
+}
+
+.productName {
+	width: 212px;
+	border-bottom: 1px solid #c6c4c7;
+}
+
+.productPrice {
+	width: 120px;
+}
+
+.priceLabel {
+	border-bottom: 1px solid #c6c4c7;
+	color: #89868d;
 }

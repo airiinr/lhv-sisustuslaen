@@ -1,12 +1,16 @@
 .calculatorContainer {
 	min-width: fit-content;
+	height: auto;
 	margin-top: 123px;
-	padding: 60px;
+	padding: 60px 164px;
 	border-radius: 4px;
 	background-color: #f1edeb;
 }
 
 .calculatorTitle {
+	width: 456.3px;
+	height: 69px;
+	padding: 0 78.85px;
 	font-weight: 300;
 	font-size: 28px;
 	line-height: 34px;
@@ -15,30 +19,42 @@
 }
 
 .calculator {
+	width: 617px;
+	height: 160px;
 	display: flex;
+	justify-content: space-between;
 	margin-top: 40px;
 }
 
 .calculatorLeft {
+	width: 374px;
+	height: 146px;
 }
 
 .titleContainer {
 	display: flex;
+	justify-content: space-between;
 	font-weight: 500;
 	font-size: 12px;
 	line-height: 18px;
 	text-transform: uppercase;
 	text-align: left;
-	color: #6c6972;
+	color: #89868d;
 }
 
-.productNameTitle,
+.productNameTitle {
+	width: 212px;
+	height: 18px;
+}
+
 .productPriceTitle {
-	width: 134px;
+	width: 132px;
 	height: 18px;
 }
 
 .calculatorRight {
+	width: 163px;
+	height: 160px;
 	display: flex;
 	flex-direction: column;
 }
