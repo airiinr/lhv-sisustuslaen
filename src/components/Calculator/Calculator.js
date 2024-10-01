@@ -5,6 +5,10 @@ const calculatorContent = {
 	titleTwo: "ja vaata oma uue sisustuse kuumakset",
 	productNameTitle: "Toode",
 	productPriceTitle: "Hind",
+	addProductButton: "Lisa toode",
+	removeProductButton: "Kustuta",
+	loanButton: "Taotle sisustuslaenu",
+	termsAndConditionsLink: "Tutvu tingimustega",
 };
 
 const Calculator = () => {
@@ -81,21 +85,47 @@ const Calculator = () => {
 							/>
 						);
 					})}
-					<button
-						type='button'
-						onClick={() => addField()}>
-						Lisa
-					</button>
-					<button
-						type='button'
-						onClick={() => removeField()}>
-						Kustuta
-					</button>
+					<div className='buttonsContainer'>
+						<button
+							className='addButton'
+							type='button'
+							onClick={() => addField()}>
+							<img
+								className='circlePlusIcon'
+								src='./circlePlusIcon.png'
+							/>
+							<p className='addButtonText'>
+								{calculatorContent.addProductButton}
+							</p>
+						</button>
+						<button
+							className='removeButton'
+							type='button'
+							onClick={() => removeField()}>
+							<img
+								className='trashIcon'
+								src='./trashIcon.png'
+							/>
+							<p className='removeButtonText'>
+								{calculatorContent.removeProductButton}
+							</p>
+						</button>
+					</div>
 				</div>
 				<div className='calculatorRight'>
-					{totalPrice}
-					<button>taotle sisustuslaenu</button>
-					<a>tutvu tingimustega</a>
+					<h1 className='totalPrice'>
+						{totalPrice} <span>&euro;</span>
+					</h1>
+					<button
+						className='loanButton'
+						type='button'>
+						{calculatorContent.loanButton}
+					</button>
+					<div className='termsAndConditions'>
+						<a className='termsAndConditionsLink'>
+							{calculatorContent.termsAndConditionsLink}
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

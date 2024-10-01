@@ -23,6 +23,7 @@
 	height: 160px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	margin-top: 40px;
 }
 
@@ -52,9 +53,132 @@
 	height: 18px;
 }
 
+.buttonsContainer {
+	width: 374px;
+	height: 24px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.addButton,
+.removeButton {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	border: none;
+	background-color: #f1edeb;
+}
+
+.addButton {
+	width: 96px;
+	justify-content: flex-start;
+}
+
+.removeButton {
+	width: 132px;
+	justify-content: flex-end;
+}
+
+.circlePlusIcon,
+.trashIcon {
+	width: 20px;
+	height: auto;
+	margin-right: 8px;
+}
+
+.addButtonText,
+.removeButtonText {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	color: #6c6972;
+}
+
+.addButton:hover,
+.removeButton:hover {
+	color: #262633;
+}
+
+.addButtonText::after,
+.removeButtonText::after {
+	content: "";
+	width: 1%;
+	display: block;
+	height: 1.5px;
+	background-color: #6c6972;
+}
+
 .calculatorRight {
 	width: 163px;
 	height: 160px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+}
+
+.totalPrice {
+	width: 110px;
+	height: 48px;
+	margin-bottom: 24px;
+	font-weight: 200;
+	font-size: 45px;
+	line-height: 48px;
+	letter-spacing: -0.015em;
+	text-align: center;
+}
+
+.loanButton {
+	width: 163px;
+	height: 48px;
+	padding: 0px 16px;
+	border-radius: 4px;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	background: #3b3b47;
+	color: #ffffff;
+}
+
+.termsAndConditions {
+	width: 135px;
+	height: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: end;
+	padding: 8px 8px 2px;
+}
+
+.termsAndConditionsLink {
+	position: relative;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: underline;
+	text-decoration-thickness: 1.5px;
+	text-underline-offset: 4px;
+	color: #6c6972;
+}
+
+.termsAndConditionsLink:hover {
+	color: #262633;
+	text-decoration: none;
+}
+
+.termsAndConditionsLink::before {
+	content: "";
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 1.5px;
+	bottom: 0;
+	left: 0;
+	background-color: #262633;
+	transform: scaleX(0);
+	transform-origin: top left;
+	transition: transform 0.5s ease;
+}
+
+.termsAndConditionsLink:hover::before {
+	transform: scaleX(1);
 }
