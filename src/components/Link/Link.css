@@ -1,10 +1,10 @@
 .linkContainer {
-	width: 96px;
-	height: 24px;
+	width: fit-content;
+	height: 21.5px;
 	margin-left: 24px;
 }
 
-.bannerLink {
+.linkWithIcon {
 	position: relative;
 	display: inline-block;
 	font-weight: 700;
@@ -15,42 +15,43 @@
 	color: #262633;
 }
 
-.bannerLink::after {
-	content: "";
-	position: absolute;
-	width: 1%;
-	display: block;
-	height: 1.5px;
-	background-color: #262633;
-}
-
-.bannerLink::before {
+/* rectangle under link */
+.linkWithIcon::before {
 	content: "";
 	position: absolute;
 	display: block;
-	width: 70%;
+	width: 2%;
 	height: 1.5px;
 	bottom: 0;
 	margin-bottom: -2px;
 	left: 0;
 	background-color: #262633;
-	transform: scaleX(0);
+	transform: scaleX(0.5);
 	transform-origin: top left;
 	transition: transform 0.2s ease;
 }
 
-.bannerLink:hover::before {
-	transform: scaleX(1);
-}
-
-.linkContent {
-	display: inline;
+/* underline on hover */
+.linkWithIcon:hover::before {
+	width: 70%;
+	transform: scale(1.1);
 }
 
 .arrowIcon {
 	width: 16px;
 	height: 16px;
-	padding-left: 8px;
+	left: 8px;
+	top: 2.75px;
+	position: relative;
+	transition: top ease 0.5s;
+}
+
+.linkWithIcon:hover .arrowIcon {
+	top: 6px;
+}
+
+.linkContent {
+	display: inline;
 }
 
 @media (min-width: 376px) {

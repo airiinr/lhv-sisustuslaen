@@ -7,7 +7,7 @@ const Link = ({ content, variant, href, onClick }) => {
 	return (
 		<div className={`linkContainer`}>
 			<a
-				className={`bannerLink ${variant}`}
+				className={`linkWithIcon ${variant}`}
 				href={href}
 				onClick={() => handleClick()}>
 				{variant === "arrow" ? (
