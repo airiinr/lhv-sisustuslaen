@@ -3,6 +3,7 @@
 @import url("/src/components/Calculator/Calculator.css");
 @import url("/src/components/Field/Field.css");
 @import url("/src/components/Footer/Footer.css");
+@import url("/src/components/Link/Link.css");
 
 html {
 	scroll-behavior: smooth;
@@ -17,4 +18,9 @@ h1,
 h2,
 h5 {
 	margin: 0;
+}
+
+a,
+a:visited {
+	color: #262633;
 }

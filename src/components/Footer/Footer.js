@@ -44,11 +44,18 @@ const Footer = () => {
 						className='draftsIcon'
 						src='./img/draftsIcon.png'
 					/>
-					<p className='contactEmailAddress'>
+					<a
+						className='contactEmailAddress'
+						href={`mailto:${footerContent.emailAddress}`}>
 						{footerContent.emailAddress}
-					</p>
+					</a>
 				</div>
 			</div>
+			{isMobile ? (
+				<p className='supportTextContent'>
+					{footerContent.textContent}
+				</p>
+			) : null}
 		</div>
 	);
 };

@@ -1,3 +1,15 @@
+@property --buttonColor1 {
+	syntax: "<color>";
+	initial-value: #3b3b47;
+	inherits: false;
+}
+
+@property --buttonColor2 {
+	syntax: "<color>";
+	initial-value: #3b3b47;
+	inherits: false;
+}
+
 .calculatorContainer {
 	min-width: fit-content;
 	height: auto;
@@ -130,11 +142,23 @@
 	height: 48px;
 	padding: 0px 16px;
 	border-radius: 4px;
+	border: none;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 20px;
-	background: #3b3b47;
+	background: linear-gradient(
+		90deg,
+		var(--buttonColor1) 0%,
+		var(--buttonColor2) 100%
+	);
+	transition: --buttonColor1 500ms, --buttonColor2 500ms;
 	color: #ffffff;
+}
+
+.loanButton:hover {
+	--buttonColor1: #1a5168;
+	--buttonColor2: #4ab4bb;
+	cursor: pointer;
 }
 
 .termsAndConditions {

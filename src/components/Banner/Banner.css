@@ -58,55 +58,6 @@
 	margin: 0 0 16px 24px;
 }
 
-.bannerLinkContainer {
-	width: 76px;
-	height: 24px;
-	margin-left: 24px;
-}
-
-.bannerLink {
-	position: relative;
-	font-weight: 700;
-	font-size: 14px;
-	line-height: 20px;
-	text-align: left;
-	text-decoration: none;
-	color: #262633;
-}
-
-.bannerLink::after {
-	content: "";
-	position: absolute;
-	width: 1%;
-	display: block;
-	height: 1.5px;
-	background-color: #262633;
-}
-
-.bannerLink::before {
-	content: "";
-	position: absolute;
-	display: block;
-	width: 80%;
-	height: 1.5px;
-	bottom: 0;
-	margin-bottom: -4px;
-	left: 0;
-	background-color: #262633;
-	transform: scaleX(0);
-	transform-origin: top left;
-	transition: transform 0.2s ease;
-}
-
-.bannerLink:hover::before {
-	transform: scaleX(1);
-}
-
-.arrowIcon {
-	width: 16px;
-	height: 16px;
-}
-
 @media (min-width: 376px) {
 	.bannerContainer {
 		position: relative;
@@ -139,9 +90,5 @@
 		width: 486px;
 		height: 96px;
 		margin: 13px 0;
-	}
-
-	.bannerLinkContainer {
-		margin-left: 0px;
 	}
 }

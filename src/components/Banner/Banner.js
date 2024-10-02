@@ -13,17 +13,11 @@ const BannerContentContainer = () => {
 			<p className='bannerContent'>
 				{bannerContent.content}
 			</p>
-			<p className='bannerLinkContainer'>
-				<a
-					className='bannerLink'
-					href='#calculator'>
-					{bannerContent.linkTitle}
-					<img
-						className='arrowIcon'
-						src='./img/arrowIcon.png'
-					/>
-				</a>
-			</p>
+			<Link
+				content={bannerContent.linkTitle}
+				variant='arrow'
+				href='#calculator'
+			/>
 		</div>
 	);
 };
