@@ -243,7 +243,7 @@
 	}
 
 	.calculatorRight {
-		width: 163px;
+		width: fit-content;
 		height: 160px;
 		margin-top: 0;
 	}

@@ -8,7 +8,9 @@ const Field = ({ product, index }) => {
 		const name = event.target.name;
 		let value;
 		if (name === "productPrice") {
-			value = parseFloat(event.target.value);
+			value = event.target.value;
+			value = value.replace(/,/g, ".");
+			value = parseFloat(value) || 0;
 		} else {
 			value = event.target.value;
 		}
@@ -39,7 +41,7 @@ const Field = ({ product, index }) => {
 				<input
 					name='productPrice'
 					className='productPrice'
-					type='number'
+					type='text'
 					onChange={handleProductInput}
 				/>
 				&euro;
