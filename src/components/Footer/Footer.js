@@ -15,7 +15,7 @@ const Footer = () => {
 			<div className='support'>
 				<img
 					className='supportIcon'
-					src='./img/supportIcon.png'
+					src='./svg/supportIcon.svg'
 				/>
 				<div className='supportText'>
 					<p className='supportTitle'>
@@ -33,7 +33,7 @@ const Footer = () => {
 				<div className='contactPhone'>
 					<img
 						className='callIcon'
-						src='./img/callIcon.png'
+						src='./svg/callIcon.svg'
 					/>
 					<p className='contactPhoneNumber'>
 						{footerContent.phoneNumber}
@@ -42,7 +42,7 @@ const Footer = () => {
 				<div className='contactEmail'>
 					<img
 						className='draftsIcon'
-						src='./img/draftsIcon.png'
+						src='./svg/draftsIcon.svg'
 					/>
 					<a
 						className='contactEmailAddress'

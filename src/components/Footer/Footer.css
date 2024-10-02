@@ -28,7 +28,7 @@
 .supportTextContent {
 	width: 320px;
 	height: 72px;
-	margin-top: 16px;
+	margin-top: 48px;
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 24px;
@@ -114,6 +114,10 @@
 	.supportTitle,
 	.supportTextContent {
 		text-align: left;
+	}
+
+	.supportTextContent {
+		margin-top: 16px;
 	}
 
 	.contact {

@@ -8,7 +8,7 @@ const Link = ({ content, variant, href, onClick }) => {
 					<p className='linkContent'>{content}</p>
 					<img
 						className={`${variant}Icon`}
-						src={`./img/${variant}Icon.png`}
+						src={`svg/${variant}Icon.svg`}
 					/>
 				</div>
 			</a>

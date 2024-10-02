@@ -33,7 +33,7 @@ const DesktopBanner = () => {
 		<div className='desktopBanner'>
 			<img
 				className='bannerImage'
-				src='./img/bannerImage.png'
+				src='./svg/bannerImage.svg'
 			/>
 			<BannerTitle />
 			<BannerContentContainer />
@@ -48,13 +48,13 @@ const MobileBanner = ({ isHovered }) => {
 				<div>
 					<img
 						className='bannerImage'
-						src='./img/bannerImage.png'
+						src='./svg/bannerImage.svg'
 					/>
 					<div className='bannerTitleContainerMobile'>
 						<BannerTitle />
 						<img
 							className='cornerIcon'
-							src='./img/cornerIcon.png'
+							src='./svg/cornerIcon.svg'
 						/>
 					</div>
 				</div>
