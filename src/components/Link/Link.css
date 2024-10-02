@@ -4,15 +4,33 @@
 	margin-left: 24px;
 }
 
+.linkContainer > a {
+	text-decoration: none;
+}
+
+.linkContainer.add,
+.linkContainer.delete {
+	margin-left: 0;
+}
+
 .linkWithIcon {
 	position: relative;
-	display: inline-block;
+	display: flex;
 	font-weight: 700;
 	font-size: 14px;
 	line-height: 20px;
 	text-align: left;
 	text-decoration: none;
 	color: #262633;
+	cursor: pointer;
+}
+
+.linkWithIcon.add,
+.linkWithIcon.delete {
+	flex-direction: row-reverse;
+	color: #6c6972;
+	font-weight: 500;
+	cursor: default;
 }
 
 /* rectangle under link */
@@ -31,10 +49,31 @@
 	transition: transform 0.2s ease;
 }
 
+.linkWithIcon.add::before,
+.linkWithIcon.delete::before {
+	left: 29px;
+	background-color: #6c6972;
+}
+
 /* underline on hover */
 .linkWithIcon:hover::before {
 	width: 70%;
 	transform: scale(1.1);
+}
+
+.linkWithIcon.add:hover::before {
+	width: 62%;
+	background-color: #262633;
+}
+
+.linkWithIcon.delete:hover::before {
+	width: 57%;
+	background-color: #262633;
+}
+
+.linkWithIcon.add:hover,
+.linkWithIcon.delete:hover {
+	color: #262633;
 }
 
 .arrowIcon {
@@ -46,12 +85,13 @@
 	transition: top ease 0.5s;
 }
 
-.linkWithIcon:hover .arrowIcon {
-	top: 6px;
+.addIcon,
+.deleteIcon {
+	margin-right: 8px;
 }
 
-.linkContent {
-	display: inline;
+.linkWithIcon:hover .arrowIcon {
+	top: 6px;
 }
 
 @media (min-width: 376px) {

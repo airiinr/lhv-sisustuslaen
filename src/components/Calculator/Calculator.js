@@ -86,30 +86,18 @@ const Calculator = () => {
 						);
 					})}
 					<div className='buttonsContainer'>
-						<button
-							className='addButton'
-							type='button'
-							onClick={() => addField()}>
-							<img
-								className='circlePlusIcon'
-								src='./img/addIcon.png'
-							/>
-							<p className='addButtonText'>
-								{calculatorContent.addProductButton}
-							</p>
-						</button>
-						<button
-							className='removeButton'
-							type='button'
-							onClick={() => removeField()}>
-							<img
-								className='trashIcon'
-								src='./img/trashIcon.png'
-							/>
-							<p className='removeButtonText'>
-								{calculatorContent.removeProductButton}
-							</p>
-						</button>
+						<Link
+							content={calculatorContent.addProductButton}
+							variant='add'
+							onClick={addField}
+						/>
+						<Link
+							content={
+								calculatorContent.removeProductButton
+							}
+							variant='delete'
+							onClick={removeField}
+						/>
 					</div>
 				</div>
 				<div className='calculatorRight'>

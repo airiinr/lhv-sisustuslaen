@@ -70,54 +70,6 @@
 	margin-top: 8px;
 }
 
-.addButton,
-.removeButton {
-	display: flex;
-	align-items: center;
-	padding: 0;
-	border: none;
-	background-color: #f1edeb;
-}
-
-.addButton {
-	width: 96px;
-	justify-content: flex-start;
-}
-
-.removeButton {
-	width: 132px;
-	justify-content: flex-end;
-}
-
-.circlePlusIcon,
-.trashIcon {
-	width: 20px;
-	height: auto;
-	margin-right: 8px;
-}
-
-.addButtonText,
-.removeButtonText {
-	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
-	color: #6c6972;
-}
-
-.addButton:hover,
-.removeButton:hover {
-	color: #262633;
-}
-
-.addButtonText::after,
-.removeButtonText::after {
-	content: "";
-	width: 1%;
-	display: block;
-	height: 1.5px;
-	background-color: #6c6972;
-}
-
 .calculatorRight {
 	width: 327px;
 	height: 160px;
@@ -179,6 +131,7 @@
 	text-decoration-thickness: 1.5px;
 	text-underline-offset: 4px;
 	color: #6c6972;
+	cursor: default;
 }
 
 .termsAndConditionsLink:hover {

@@ -1,29 +1,16 @@
 const Link = ({ content, variant, href, onClick }) => {
-	const handleClick = () => {
-		onClick;
-		console.log("test");
-	};
-	console.log(variant);
 	return (
-		<div className={`linkContainer`}>
+		<div className={`linkContainer ${variant}`}>
 			<a
-				className={`linkWithIcon ${variant}`}
 				href={href}
-				onClick={() => handleClick()}>
-				{variant === "arrow" ? (
+				onClick={onClick ? () => onClick() : null}>
+				<div className={`linkWithIcon ${variant}`}>
 					<p className='linkContent'>{content}</p>
-				) : null}
-				{
 					<img
 						className={`${variant}Icon`}
 						src={`./img/${variant}Icon.png`}
 					/>
-				}
-				{variant !== "arrow" ? (
-					<p className={`linkContent ${variant}`}>
-						{content}
-					</p>
-				) : null}
+				</div>
 			</a>
 		</div>
 	);
