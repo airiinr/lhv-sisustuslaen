@@ -51,9 +51,13 @@ const Calculator = () => {
 		products.forEach((product) => {
 			total.push(product.productPrice);
 		});
-		const totalSum = total.reduce(
+		let totalSum = 0;
+		totalSum = total.reduce(
 			(accumulator, currentValue) =>
 				accumulator + currentValue
+		);
+		totalSum = (Math.round(totalSum * 100) / 100).toFixed(
+			2
 		);
 		setTotalPrice(totalSum);
 	}, [products]);
